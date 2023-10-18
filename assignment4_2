@@ -1,0 +1,21 @@
+def grade(num):
+    if num >= 90:
+        grade = "A"
+    if num >= 80:
+        grade = "B"
+    if num >= 70:
+        grade = "C"
+    if num >= 60:
+        grade = "D"
+    if num < 60:
+        grade = "F"
+    return grade
+try:
+    user_input = int(input("Enter your score: "))
+    if user_input >= 0 and user_input <= 100 :
+        print("Your grade is ", grade(user_input))
+    else:
+        print("Please ener valid score")
+
+except:
+    print("Please ener valid score")

@@ -1,0 +1,19 @@
+def computepay(hours,rate):
+    if hours < 40:
+        pay = hours * rate
+    if hours > 40:
+        extra_hour = hours - 40
+        extra_pay = extra_hour * rate * 1.5
+        pay = (hours * rate) + extra_pay - (extra_hour * rate)
+    return pay
+
+try:
+    hours = int(input("Enter hours: "))
+    rate = float(input("Enter payment rate: "))
+    if hours > 0 and rate > 0 :
+        print("Your saary is: ",computepay(hours,rate))
+    else:
+        print("Enter valid input")
+
+except:
+    print("Enter valid input")
